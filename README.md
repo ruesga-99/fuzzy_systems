@@ -82,3 +82,4 @@ This repository contains a fuzzy expert system for a smart traffic light control
    ```bash
    pip install numpy
    pip install scikit-fuzzy
+   pip install matplotlib
