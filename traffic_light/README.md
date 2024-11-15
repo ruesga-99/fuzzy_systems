@@ -1,5 +1,5 @@
 # Fuzzy Traffic Light 🚦
-This repository contains a fuzzy expert system for a smart traffic light controller, which considers factors such as traffic density, time of the day and weather conditions (rain).
+This directory contains a fuzzy expert system for a smart traffic light controller, which considers factors such as traffic density, time of the day and weather conditions (rain).
 
 ## Fuzzy Sets 
 **Input: Traffic Density**
