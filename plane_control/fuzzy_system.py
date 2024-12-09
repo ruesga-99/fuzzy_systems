@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # Define fuzzy variables
 velocity = ctrl.Antecedent(np.arange(0, 1001, 1), 'velocity')
 angle = ctrl.Antecedent(np.arange(-10, 11, 1), 'angle')
-position = ctrl.Antecedent(np.arange(0, 11, 1), 'position')
+position = ctrl.Consequent(np.arange(0, 11, 1), 'position')
 
 ''' Define fuzzy membership functions
 '''
@@ -27,12 +27,32 @@ position['high'] = fuzz.trapmf(position.universe, [8, 10, 10, 10])
 ''' Define control rules
 '''
 rules = []
+rules.append(ctrl.Rule(velocity['high'] & angle['up'], position['low_med']))
+rules.append(ctrl.Rule(velocity['high'] & angle['level'], position['low_med']))
+rules.append(ctrl.Rule(velocity['high'] & angle['down'], position['low']))
+rules.append(ctrl.Rule(velocity['ok'] & angle['up'], position['high_med']))
+rules.append(ctrl.Rule(velocity['ok'] & angle['level'], position['med']))
+rules.append(ctrl.Rule(velocity['ok'] & angle['down'], position['low_med']))
+rules.append(ctrl.Rule(velocity['low'] & angle['up'], position['low_med']))
+rules.append(ctrl.Rule(velocity['low'] & angle['level'], position['low_med']))
+rules.append(ctrl.Rule(velocity['low'] & angle['down'], position['low']))
 
 # Create the control system based on the rules
 control_sys = ctrl.ControlSystem(rules)
 
 # Initialize simulation of the fuzzy system
 fuzzy_plane_control_sys = ctrl.ControlSystemSimulation(control_sys)
+
+# Input the initial values
+fuzzy_plane_control_sys.input['velocity'] = 500
+fuzzy_plane_control_sys.input['angle'] = 5
+
+# Get the fuzzy membership of the values
+fuzzy_plane_control_sys.compute()
+
+# Calculate result
+result_position = fuzzy_plane_control_sys.output['position']
+print("Assigned yoke's position:", result_position, "cm")
 
 # Plot the inputs and output
 position.view(sim=fuzzy_plane_control_sys)
