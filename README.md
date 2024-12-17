@@ -1,6 +1,9 @@
-# Fuzzy Logic System 
+# Fuzzy Logic Systems
 This repository contains different fuzzy expert systems applicable to IoT devices.
 Each model considers factors differnet real-life continuous factors.
+
+Fuzzy logic is a branch of mathematical logic used to model uncertainty and imprecision in data. Fuzzy logic is a computing technique used in artificial intelligence and machine learning. It is based on the idea that results can be more imprecise and uncertain, but expressed more clearly. This systems defer from classical boolean logic and values take
+place within a range between 0 and 1.
 
 ## List of Implemented Models
 
