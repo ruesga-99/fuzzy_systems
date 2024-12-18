@@ -9,8 +9,9 @@ place within a range between 0 and 1.
 
 <dl>
   <dd> &nbsp&nbsp ✅ Fuzzy Traffic Light </dd>
-  <dd> &nbsp&nbsp 💡 Fuzzy Plane Controller </dd>
+  <dd> &nbsp&nbsp ✅ Fuzzy Plane Controller </dd>
   <dd> &nbsp&nbsp 💡 Fuzzy Air Conditioning </dd>
+  <dd> &nbsp&nbsp 💡 Inverted Pendulum </dd>
 </dl>
 
 ## Emoji Key
