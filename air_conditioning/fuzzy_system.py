@@ -27,3 +27,38 @@ output_voltage['high'] = fuzz.trapmf(output_voltage.universe, [9, 12, 12, 12])
 ''' Define control rules
 '''
 rules = []
+rules.append(ctrl.Rule(room_temperature['low'] & relative_humidity['low'], output_voltage['low']))
+rules.append(ctrl.Rule(room_temperature['low'] & relative_humidity['medium'], output_voltage['mid_low']))
+rules.append(ctrl.Rule(room_temperature['low'] & relative_humidity['high'], output_voltage['mid_high']))
+rules.append(ctrl.Rule(room_temperature['medium'] & relative_humidity['low'], output_voltage['low']))
+rules.append(ctrl.Rule(room_temperature['medium'] & relative_humidity['medium'], output_voltage['medium']))
+rules.append(ctrl.Rule(room_temperature['medium'] & relative_humidity['high'], output_voltage['high']))
+rules.append(ctrl.Rule(room_temperature['high'] & relative_humidity['low'], output_voltage['mid_low']))
+rules.append(ctrl.Rule(room_temperature['high'] & relative_humidity['medium'], output_voltage['mid_high']))
+rules.append(ctrl.Rule(room_temperature['high'] & relative_humidity['high'], output_voltage['high']))
+
+# Create the control system based on the rules
+control_sys = ctrl.ControlSystem(rules)
+
+# Initialize simulation of the fuzzy system
+fuzzy_air_conditioning_sys = ctrl.ControlSystemSimulation(control_sys)
+
+# Input the initial values
+fuzzy_air_conditioning_sys.input['room_temperature'] = 25
+fuzzy_air_conditioning_sys.input['relative_humidity'] = 73
+
+# Get the fuzzy membership of the values
+fuzzy_air_conditioning_sys.compute()
+
+# Calculate result
+result_voltage = fuzzy_air_conditioning_sys.output['output_voltage']
+print("Resulting applied voltage:", result_voltage, "V")
+
+# Plot the inputs and output
+room_temperature.view(sim=fuzzy_air_conditioning_sys)
+plt.title("Room Temperature (°C)")
+relative_humidity.view(sim=fuzzy_air_conditioning_sys)
+plt.title("Relative Humidity (%)")
+output_voltage.view(sim=fuzzy_air_conditioning_sys)
+plt.title("Output Voltage (V)")
+plt.show(block=True)
