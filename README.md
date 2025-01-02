@@ -31,8 +31,22 @@ The Mamdani algorithm is one of the most widely used fuzzy inference methods. It
 
 Membership functions define how each input maps to a degree of membership within a fuzzy set. Common types include:
 - Triangular
+  - Lambda Function
 - Trapezoidal
+  - Gamma Function
+  - L-Function
 - Gaussian
+- Sigmoid
+
+### Real Life Applications
+Fuzzy systems are useful whenever a process has a high complexity and no precise mathematical models are availiable, thus
+fuzzy systems are powerful tools in different indusrty-environments and IoT systems such as:
+- Temperature control systems.
+- Light control systems.
+- Fuel efficiency systems.
+- Robotic control applications.
+- Autonomous driving.
+- Writing systems.
 
 ## List of Implemented Models
 
