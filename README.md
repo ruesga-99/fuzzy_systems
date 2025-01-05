@@ -71,12 +71,20 @@ fuzzy systems are powerful tools in different indusrty-environments and IoT syst
 1. Clone the repository:
    ```bash
    git clone https://github.com/ruesga-99/fuzzy_traffic_light.git
+   ```
    
 2. Install dependencies:
    ```bash
    pip install numpy
    pip install scikit-fuzzy
    pip install matplotlib
+   ```
+> [!NOTE]
+> [Scikit-Fuzzy](https://github.com/scikit-fuzzy/scikit-fuzzy) depends on:
+>  - Matplotlib >= 3.1
+>  - NumPy >= 1.6
+>  - SciPy >= 0.9
+>  - NetworkX >= 1.9
 
 ## Contributions
 
