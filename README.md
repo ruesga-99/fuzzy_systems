@@ -49,13 +49,15 @@ fuzzy systems are powerful tools in different indusrty-environments and IoT syst
 - Writing systems.
 
 ## List of Implemented Models
-
+**Basic Models**
 <dl>
   <dd> &nbsp&nbsp ✅ Fuzzy Traffic Light </dd>
   <dd> &nbsp&nbsp ✅ Fuzzy Plane Controller </dd>
   <dd> &nbsp&nbsp ✅ Fuzzy Air Conditioning </dd>
+  <dd> &nbsp&nbsp 📆 Smart Illumination System </dd>
   <dd> &nbsp&nbsp 💡 Inverted Pendulum </dd>
 </dl>
+
 
 ## Emoji Key
 ✅ (Completed): This emoji is used to mark tasks that have been finished and require no further work.
@@ -88,7 +90,7 @@ fuzzy systems are powerful tools in different indusrty-environments and IoT syst
 
 ## Contributions
 
-Feel free to contribute to this repository adding your own models or upgrading the existing ones.
+Feel free to contribute to this repository adding your own models or upgrading the existing ones!
 
 To contribute a solution:
 
