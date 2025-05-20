@@ -58,6 +58,15 @@ fuzzy systems are powerful tools in different indusrty-environments and IoT syst
   <dd> &nbsp&nbsp 💡 Inverted Pendulum </dd>
 </dl>
 
+> [!IMPORTANT]
+> **Advanced Fuzzy Systems: Adaptive Neuro-Fuzzy Inference System (ANFIS)**
+> 
+> For more sophisticated applications, this repository links to a dedicated implementation of ANFIS (Adaptive Neuro-Fuzzy Inference System), a hybrid model that combines fuzzy logic with neural networks. ANFIS enhances traditional fuzzy systems by:
+> - *Learning capability*: Automatically optimizes fuzzy rules and membership functions through training data.
+> - *Adaptation*: Dynamically adjusts to changing environments, making it ideal for IoT systems with real-time data streams.
+> - *Precision*: Balances interpretability (fuzzy logic) with predictive accuracy (neural networks).
+> 
+> Explore the [ANFIS](https://github.com/ruesga-99/anfis) repository here to see how machine learning and fuzzy logic synergize in complex decision-making scenarios. Contributions and feedback are welcome!
 
 ## Emoji Key
 ✅ (Completed): This emoji is used to mark tasks that have been finished and require no further work.
